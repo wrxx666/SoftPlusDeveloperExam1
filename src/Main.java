@@ -1,3 +1,4 @@
+/*
 public class Main {
     public static void main(String[] args){
         Employee tester = new Employee(7, "Developer");
@@ -23,8 +24,8 @@ class Employee {
         return id;
     }
 }
+*/
 
-/*
 public class Main {
     public static void main(String[] args){
         Employee tester = new Employee(7, "Developer");
@@ -36,8 +37,12 @@ public class Main {
 class Employee {
     private long id;
     private Vacancy vacancy;
+    Employee(long id,String vacancyName){
+        this.id = id;
+        this.vacancy = new Vacancy(vacancyName);
+    }
     String getVacancy() {
-        return vacancy.getVacancy();
+        return vacancy.getVacancyName();
     }
 
     long getId() {
@@ -46,10 +51,14 @@ class Employee {
 }
 
 class Vacancy {
-    String getVacancy() {
-        return "engineer";
+    private String vacancyName;
+    Vacancy(String vacancyName){
+        this.vacancyName = vacancyName;
+    }
+    String getVacancyName() {
+        return vacancyName;
     }
 }
-*/
+
 
 
